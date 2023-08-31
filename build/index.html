@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:,">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+    <title>Build</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        canvas {
+            padding: 0;
+            margin: auto;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+
+    <script>
+        // GENERATE TOKEN DATA
+        let xx = "0123456789abcdef";
+        let hash = '0x';
+
+        for (let i = 64; i > 0; --i) {
+                hash += xx[Math.floor(Math.random() * xx.length)]
+        };
+
+        let tokenData = {
+            "hash": hash,
+            "tokenId": "123000456"
+        };
+    </script>
+    <script src="/build.js"></script>
+</body>
+</html>

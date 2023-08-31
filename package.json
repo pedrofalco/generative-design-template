@@ -1,0 +1,30 @@
+{
+  "name": "generative-design-template",
+  "version": "1.0.0",
+  "description": "A framework for creating generative design.",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Pedro Falco",
+    "email": "fpfalco@gmail.com",
+    "url": "https://github.com/pedrofalco"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "min": "node ./public/utils/minify.js",
+    "render": "node index.js --h",
+    "bundle": "node index.js --b",
+    "export": "node index.js --e"
+  },
+  "devDependencies": {
+    "express": "^4.18.2",
+    "progress-bar-cli": "^1.0.4",
+    "puppeteer": "^13.7.0",
+    "rollup": "^3.28.1",
+    "terser": "^5.19.2",
+    "vite": "^4.4.5"
+  }
+}
