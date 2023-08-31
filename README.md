@@ -1,6 +1,7 @@
 ﻿## Generative Design Template ✍️
 
 `ES`
+
 Template para crear proyectos de diseño y arte generativo.
 
 Características:
@@ -42,9 +43,12 @@ La variable `tokenData` ya está declarada y asignada. Esta contiene el numero d
 
 👋 *Si lo usas, si tenés algún tipo de feedback o problema, hacemelo llegar por favor :)*
 
+
 ---
 
+
 `EN`
+
 Boilerplate for creating generative art and design projects.
 
 Features:
@@ -55,7 +59,7 @@ Features:
 - Rendering images in Headless using `puppeteer`.
 - Batch download of images in Headless using Puppeteer.
 - Support for p5.js and shaders.
-- Download (`'s`) and Reload (`'r`) with keyboard.
+- Download (`'s'`) and Reload (`'r'`) with keyboard.
 
 ### Quick Start with Node.js & npm 🚩
 
