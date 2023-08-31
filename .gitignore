@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 outputs/*
+!outputs/.gitkeep
 
 # Editor directories and files
 .vscode/*
