@@ -41,6 +41,7 @@ El espacio de trabajo es dentro de la carpeta `public`. Ahi se encuentran los ar
 En la carpeta `build` funciona el sistema de export y renderizado de imágenes en modo "headless" (como funciona el engine de artblocks, por ejemplo). Usar el archivo `build.js` para pegar el sketch ahi. 
 La variable `tokenData` ya está declarada y asignada. Esta contiene el numero de `ID` y `hash` que se necesita para hacer deterministico el output. La función de random que utilizen debería escuchar una variable que tenga `tokenData.hash`.
 
+
 👋 *Si lo usas, si tenés algún tipo de feedback o problema, hacemelo llegar por favor :)*
 
 
@@ -87,6 +88,7 @@ The workspace is inside the `public` folder. There you will find the `sketch.js`
 
 Inside the `build` folder works the export and rendering system in "headless" mode (as the artblocks engine works, for example). Use the `build.js` file to paste the sketch there. 
 The `tokenData` variable is already declared and assigned. It contains the `ID` and `hash` number needed to make the output deterministic. The random function you use should listen for a variable that has `tokenData.hash`.
+
 
 👋 *If you use it or if you have any feedback or problem, please let me know :)*
 
