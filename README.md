@@ -26,10 +26,10 @@ Para usar este respositorio es necesario descargar [Node.js](https://nodejs.org/
 
 ### Comentarios y comandos 🚏 
 
-`npm run render`: Renderizar imágen usando `puppeteer`. Se guarda un screenshot en `outputs`.
+`npm run render`: Renderizar imágen usando `puppeteer`. Se guarda un screenshot en `outputs`. Configurá una resolución y relacion de aspecto custom en `index.js`.
 > 💡 Tip: usar `npm run render false` para ver el la pestaña.
 
-`npm run export`: Renderizar y exportar imágenes usando `puppeteer`. Por default la cantidad es `5`. Utilizar el cuarto parametro para pasarle la cantidad. Ej.: `npm run export 20`. Se guarda un screenshot en `outputs`.
+`npm run export`: Renderizar y exportar imágenes usando `puppeteer`. Por default la cantidad es `5`. Utilizar el cuarto parametro para pasarle la cantidad. Ej.: `npm run export 20`. Se guarda un screenshot en `outputs`. Configurá una resolución y relacion de aspecto custom en `index.js`.
 
 `npm run min`: Minificar el archivo `sketch.js` con salida en `build/sketch.min.js`.
 
@@ -74,10 +74,10 @@ To use this repository you need to download [Node.js](https://nodejs.org/es/).
 
 ### Comments & commands 🚏 
 
-`npm run render`: Render image using `puppeteer`. A screenshot is saved in `outputs`.
+`npm run render`: Render image using `puppeteer`. A screenshot is saved in `outputs`. Set a custom resolution and aspect ratio in `index.js`.
 > 💡 Tip: `npm run render false` to see the page. 
 
-`npm run export`: Render and export images using `puppeteer`. By default the amount is `5`. Use the fourth parameter to pass the quantity. E.g.: `npm run export 20`. A screenshot is saved in `outputs`.
+`npm run export`: Render and export images using `puppeteer`. By default the amount is `5`. Use the fourth parameter to pass the quantity. E.g.: `npm run export 20`. A screenshot is saved in `outputs`. Set a custom resolution and aspect ratio in `index.js`.
 
 `npm run min`: Minify the `sketch.js` file with output in `build/sketch.min.js`.
 

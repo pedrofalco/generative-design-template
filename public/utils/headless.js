@@ -5,15 +5,13 @@ export const headless = (isHeadless) => {
 
   console.log('Running a headless browser...');
 
-  let date_ob = new Date();
+  let date = new Date();
   let start = Date.now()
 
-  let hours = date_ob.getHours();
-  let minutes = date_ob.getMinutes();
-  let seconds = date_ob.getSeconds();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
 
-  let limit = 1;
-  let idx = 0;
   (async () => {
       const browser = await puppeteer.launch(
         {
@@ -22,7 +20,7 @@ export const headless = (isHeadless) => {
           defaultViewport: {
             width: resolution * aspect_ratio,
             height: resolution
-          }, // change to null to set windowSize
+          }, // change defaultViewport to null to set windowSize
           args: ['--no-sandbox', '--disable-setuid-sandbox', '--use-angle=metal']
           // args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--use-gl=egl']
         }
@@ -30,28 +28,22 @@ export const headless = (isHeadless) => {
 
       const page = await browser.newPage();
 
-      //LOGS
       page
       .on('pageerror', ({ message }) => console.log(message))
       .on('requestfailed', request =>
-      console.log(`${request.failure().errorText} ${request.url()}`))
-        // .on('console', message =>
-      //     console.log(`${message.type().substr(0, 3).toUpperCase()} ${message.text()}`))
-      //   .on('response', response =>
-      //     console.log(`${response.status()} ${response.url()}`))
-      
+      console.log(`${request.failure().errorText} ${request.url()}`))      
 
       await page.goto(`http://localhost:${PORT}`, { waitUntil: 'networkidle0', timeout: 0 });
 
-      // console.log(`SCREENSHOT START seconds elapsed = ${(Date.now() - start)}`);
-      // idx +=1;
+      console.log(`Screenshot started: ${(Date.now() - start)}ms`);
       
       await page.screenshot({
 
-        path: `./outputs/screenshot_${hours}_${minutes}_${seconds}_${idx}.png`
+        path: `./outputs/screenshot_${hours}_${minutes}_${seconds}.png`
       });
       await page.close();
       await browser.close();
-      // console.log(`SCREENSHOT END MS elapsed = ${(Date.now() - start)}`);
+
+      console.log(`Screenshot finished: ${(Date.now() - start)}ms`);
     })();
   }

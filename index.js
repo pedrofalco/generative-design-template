@@ -4,7 +4,7 @@ import { bundle } from './public/utils/bundle.js';
 import { render } from './public/utils/render.js';
 
 const resolution = 2048;
-const aspect_ratio = 9/16;
+const aspect_ratio = 1/1;
 
 const app = express();
 const PORT = 3000; 
